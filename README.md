@@ -21,3 +21,11 @@
 实现了简单的日志系统
 
 定义进程池类，实现了代码的复用
+
+### Model
+![](https://github.com/GeniusIOTboy1998/NetworkConcurrentServer/blob/master/Model/process.png)
+
+
+### 代码统计
+
+![](https://github.com/GeniusIOTboy1998/NetworkConcurrentServer/blob/master/Model/tree.png)
