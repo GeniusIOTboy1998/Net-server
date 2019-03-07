@@ -15,6 +15,6 @@ using namespace std;
 
 int main(){
 //   freopen("C:\\Users\\24398\\Desktop\\in-project.txt","r",stdin);
-    
+        const int maxn= ; // xxxx
 	return 0;
 } 
