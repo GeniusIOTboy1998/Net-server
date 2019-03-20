@@ -12,22 +12,17 @@
 
 ### Technical points
 
-使用Epoll边沿触发的IO多路复用技术，非阻塞IO
+（1）使用Epoll边沿触发的IO多路复用技术，非阻塞IO，高效处理事件
+采用简单的循环遍历，找出负载最小服务器，达到附载均衡目的
 
-使用多进程充分利用多核CPU，并使用线程池避免线程频繁创建销毁的开销
+（2）使用多进程充分利用多核CPU，并使用进程池避免进程频繁创建销毁的开销，实现简单的并发CGI server
 
-通过定义一个变量记录每个进程连接数量，而后采用简单遍历，以最小连接新的请求，以此达到负载均衡的目标
+（3）epoll模型实现的是高并发的聊天室， client：从标准输入中读入数据，并将之发送给客户端
 
-主线程统一管理监听socket何连接socket，灵活性高
-
-实现了简单的日志系统
-
-定义进程池类，实现了代码的复用
+     server： 接受客户端发来的数据并打印，在终端输出
+     
+（4）并且实现半同步/半反应堆线程池 
 
 ### Model
 ![](https://github.com/GeniusIOTboy1998/NetworkConcurrentServer/blob/master/Model/process.png)
 
-
-### 代码统计
-
-![](https://github.com/GeniusIOTboy1998/NetworkConcurrentServer/blob/master/Model/tree.png)
