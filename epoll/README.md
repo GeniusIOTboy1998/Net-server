@@ -1,0 +1,3 @@
+本项目实现一个简单的基于epoll的server，及client
+
+支持在线群聊功能
